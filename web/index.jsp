@@ -32,6 +32,7 @@
 </head>
 
 <body>
+    <%@include file="verificasesion.jsp" %>
     <%@include file="sidebar.jsp" %>
 	<section class="home">
 		<section class="form-ticket">
