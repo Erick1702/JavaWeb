@@ -9,6 +9,9 @@
 				<div class="texto header-text">
 					<span class="name">SGP</span>
 					<span class="profession">FUNDICION</span>
+                                        <%
+                                            out.println("<span>Usuario : " + user +"</span>");
+                                        %>
 				</div>
 
 			</div>
