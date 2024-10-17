@@ -158,16 +158,16 @@
 
     
 <main class="form-signin  m-auto">
-  <form>
+  <form action="valida.jsp" method="post">
     <img class="mb-4" src="imagen/logo.png" alt="logo" width="100" height="100">
     <h1 class="h3 mb-3 fw-normal">Inicia Sesion</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="usuario" name="usuario" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Correo electronico</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Contraseña</label>
     </div>
 
