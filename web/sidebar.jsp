@@ -30,14 +30,14 @@
 					</li>
 					<ul class="text nav-text">
 						<li class="nav-item">
-                                                    <a class="nav-link" href="http://localhost:8080/Prueba/Comercial/clientes.jsp" >Clientes</a>
+                                                    <a class="nav-link" href="http://localhost:8080/JavaWeb/Comercial/clientes.jsp" >Clientes</a>
                                                     
 						</li>
 						<li class="nav-item">
-                                                    <a class="nav-link" href="http://localhost:8080/Prueba/Comercial/pedidos.jsp">Pedidos</a>
+                                                    <a class="nav-link" href="http://localhost:8080/JavaWeb/Comercial/pedidos.jsp">Pedidos</a>
 						</li>
 						<li class="nav-item">
-                                                    <a class="nav-link" href="http://localhost:8080/Prueba/Comercial/productos.jsp">Productos</a>
+                                                    <a class="nav-link" href="http://localhost:8080/JavaWeb/Comercial/productos.jsp">Productos</a>
 						</li>
 					</ul>
 
@@ -49,7 +49,7 @@
 					</li>
 					<ul class="text nav-text">
 						<li class="nav-item">
-							<a class="nav-link" href="http://localhost:8080/Prueba/Inventario/notaingreso.jsp">Notas de Ingreso</a>
+							<a class="nav-link" href="http://localhost:8080/JavaWeb/Inventario/notaingreso.jsp">Notas de Ingreso</a>
 						</li>
 					</ul>
 					<li class="text nav-text">
@@ -60,7 +60,7 @@
 					</li>
 					<ul class="text nav-text">
 						<li class="nav-item">
-							<a class="nav-link" href="http://localhost:8080/Prueba/Ingenieria/planos.jsp">Planos</a>
+							<a class="nav-link" href="http://localhost:8080/JavaWeb/Ingenieria/planos.jsp">Planos</a>
 						</li>
 					</ul>
 					<li class="text nav-text">
@@ -71,10 +71,10 @@
 					</li>
 					<ul class="text nav-text">
 						<li class="nav-item">
-							<a class="nav-link" href="http://localhost:8080/Prueba/Produccion/programafusion.jsp">Programa Fusión</a>
+							<a class="nav-link" href="http://localhost:8080/JavaWeb/Produccion/programafusion.jsp">Programa Fusión</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="http://localhost:8080/Prueba/Produccion/procesosproduccion.jsp">Procesos de Producción</a>
+							<a class="nav-link" href="http://localhost:8080/JavaWeb/Produccion/procesosproduccion.jsp">Procesos de Producción</a>
 						</li>
 					</ul>
 					<li class="text nav-text">
@@ -85,15 +85,20 @@
 					</li>
 					<ul class="text nav-text">
 						<li class="nav-item">
-							<a class="nav-link" href="http://localhost:8080/Prueba/Calidad/Rechazos.jsp">Rechazos</a>
+							<a class="nav-link" href="http://localhost:8080/JavaWeb/Calidad/Rechazos.jsp">Rechazos</a>
 						</li>
 					</ul>
 					<li class="text nav-text">
-						<a href="http://localhost:8080/Prueba/Configuracion/configuracion.jsp">
+						<a href="#">
 							<i class='bx bx-cog icon'></i>
 							<span class="text nav-text">Configuración</span>
 						</a>
 					</li>
+                                        <ul class="text nav-text">
+						<li class="nav-item">
+							<a class="nav-link" href="http://localhost:8080/JavaWeb/Configuracion/usuarios.jsp">Usuarios</a>
+						</li>
+					</ul>
 				</div>
 
 				<div class="bottom-content">
