@@ -182,6 +182,10 @@
                     <%@include file="Calidad/rechazos.jsp"  %>
                     <% } else if (pagina.equals("usuarios")) {%>
                     <%@include file="Configuracion/usuarios.jsp"  %>
+                    <% } else if (pagina.equals("verusuario")) {%>
+                    <%@include file="Configuracion/verusuario.jsp"  %>
+                    <% } else if (pagina.equals("editarusuario")) {%>
+                    <%@include file="Configuracion/editarusuario.jsp"  %>
                     <%
                         }
                     %>
