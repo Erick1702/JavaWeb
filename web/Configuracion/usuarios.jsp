@@ -77,9 +77,9 @@
         <tr>
             <td><%=ux.getUsurio()%></td>
             <td><%=ux.getPassword()%></td>
-            <td> <a href="sidebar.jsp?pagina=editarusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-info" >Ver</a> </td>
-            <td> <a>Editar</a> </td>
-            <td> <a>Eliminar</a> </td>
+            <td> <a href="sidebar.jsp?pagina=verusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-info" >Ver</a> </td>
+            <td> <a href="sidebar.jsp?pagina=editarusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-warning" >Editar</a> </td>
+            <td> <a href="sidebar.jsp?pagina=eliminarusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-danger" >Eliminar</a> </td>
         </tr>
         <%
             }
