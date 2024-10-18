@@ -28,7 +28,7 @@
                 if (logueado == null) {
                     sesion.setAttribute("logueado", 1);
                     sesion.setAttribute("user", usuario);
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("sidebar.jsp");
                 }
                 out.println("<a href='infogerentegeneral.jsp'>VER INFORMACION</a>");
             } else {

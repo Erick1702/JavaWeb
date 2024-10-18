@@ -1,3 +1,5 @@
+<%@page import="pe.com.db.Usuario" %>
+<%@page import="java.util.LinkedList" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -58,14 +60,14 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=clientes" >Clientes</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=clientes" >Clientes</a>
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=pedidos">Pedidos</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=pedidos">Pedidos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=productos">Productos</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=productos">Productos</a>
                             </li>
                         </ul>
 
@@ -77,7 +79,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?=pagina=notaingreso">Notas de Ingreso</a>
+                                <a class="nav-link" href="sidebar.jsp?=pagina=notaingreso">Notas de Ingreso</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -88,7 +90,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=planos">Planos</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=planos">Planos</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -99,10 +101,10 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=programafusion">Programa Fusión</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=programafusion">Programa Fusión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=procesosproduccion">Procesos de Producción</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=procesosproduccion">Procesos de Producción</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -113,7 +115,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=rechazos">Rechazos</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=rechazos">Rechazos</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -124,7 +126,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="index.jsp?pagina=usuarios">Usuarios</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=usuarios">Usuarios</a>
                             </li>
                         </ul>
                     </div>

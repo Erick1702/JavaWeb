@@ -1,16 +1,16 @@
-<%-- 
-    Document   : configuracion
-    Created on : 19 set. 2024, 17:30:59
-    Author     : PC-ERICK
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
-<h2>Configuración</h2>
+<%
+    Usuario u = new Usuario();
+    LinkedList<Usuario> lista = new LinkedList<>();
+    lista = u.listarUsuarios();
+    int cont = 0;
+%>
+
+<h2>Configuraci�n</h2>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Configuración</a></li>
+        <li class="breadcrumb-item"><a href="#">Configuraci�n</a></li>
         <li class="breadcrumb-item active" aria-current="page">Mantenimiento de Usuarios</li>
     </ol>
 </nav>
@@ -61,39 +61,30 @@
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>ID_USUARIO</th>
-            <th>NOMBRE</th>
-            <th>APELLIDO PATERNO</th>
-            <th>APELLIDO MATERNO</th>
-            <th>DNI</th>
-            <th>CORREO</th>
+            <th>Usuario</th>
+            <th>Password</th>
+            <th>Ver</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+
         </tr>
     </thead>
     <tbody>
+        <%
+            for (Usuario ux : lista) {
+                cont++;
+        %>
         <tr>
-            <td>001</td>
-            <td>Erick</td>
-            <td>Pérez</td>
-            <td></td>
-            <td>12345678</td>
-            <td>erick@mail.com</td>
+            <td><%=ux.getUsurio()%></td>
+            <td><%=ux.getPassword()%></td>
+            <td> <a href="sidebar.jsp?pagina=editarusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-info" >Ver</a> </td>
+            <td> <a>Editar</a> </td>
+            <td> <a>Eliminar</a> </td>
         </tr>
-        <tr>
-            <td>002</td>
-            <td>Kevin</td>
-            <td>García</td>
-            <td></td>
-            <td>87654321</td>
-            <td>kevin@mail.com</td>
-        </tr>
-        <tr>
-            <td>003</td>
-            <td>Amir</td>
-            <td>Khan</td>
-            <td></td>
-            <td>11223344</td>
-            <td>amir@mail.com</td>
-        </tr>
+        <%
+            }
+        %>
+
     </tbody>
 </table>
 <div class="row mb-3">
