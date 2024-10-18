@@ -11,4 +11,10 @@
     </welcome-file-list>
 
     <!-- Otras configuraciones -->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/errorpage.jsp</location>
+    </error-page>
 </web-app>
+
+
