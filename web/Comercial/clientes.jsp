@@ -31,7 +31,7 @@
 <div class="row md-3">
     <div class="col-md-12">
         <a href="mantcli.jsp"><button class="btn btn-success">Nuevo</button></a>
-        <a href="mantcli.html"><button class="btn btn-primary">Editar</button></a>
+        <a href="mantcli.jsp"><button class="btn btn-primary">Editar</button></a>
         <button type="button" class="btn btn-danger" onclick="limpiarDatos()">Limpiar</button></a>
     </div>                                                                                                            
 </div>
@@ -80,5 +80,3 @@
         </tbody>
     </table>
 </div>
-
-<script src="../js/datos.js"></script>

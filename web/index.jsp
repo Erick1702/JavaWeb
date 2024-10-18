@@ -58,14 +58,14 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Comercial/clientes.jsp" >Clientes</a>
+                                <a class="nav-link" href="index.jsp?pagina=clientes" >Clientes</a>
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Comercial/pedidos.jsp">Pedidos</a>
+                                <a class="nav-link" href="index.jsp?pagina=pedidos">Pedidos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Comercial/productos.jsp">Productos</a>
+                                <a class="nav-link" href="index.jsp?pagina=productos">Productos</a>
                             </li>
                         </ul>
 
@@ -77,7 +77,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Inventario/notaingreso.jsp">Notas de Ingreso</a>
+                                <a class="nav-link" href="index.jsp?=pagina=notaingreso">Notas de Ingreso</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -88,7 +88,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Ingenieria/planos.jsp">Planos</a>
+                                <a class="nav-link" href="index.jsp?pagina=planos">Planos</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -99,10 +99,10 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Produccion/programafusion.jsp">Programa Fusión</a>
+                                <a class="nav-link" href="index.jsp?pagina=programafusion">Programa Fusión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Produccion/procesosproduccion.jsp">Procesos de Producción</a>
+                                <a class="nav-link" href="index.jsp?pagina=procesosproduccion">Procesos de Producción</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -113,7 +113,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Calidad/Rechazos.jsp">Rechazos</a>
+                                <a class="nav-link" href="index.jsp?pagina=rechazos">Rechazos</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -124,7 +124,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="http://localhost:8080/JavaWeb/Configuracion/usuarios.jsp">Usuarios</a>
+                                <a class="nav-link" href="index.jsp?pagina=usuarios">Usuarios</a>
                             </li>
                         </ul>
                     </div>
@@ -155,12 +155,39 @@
         <section class="home">
             <section class="form-ticket">
                 <div class="col-md-9">
-                      Aqui contenido dinamico
-                      <%@include file="dashboard.jsp" %>
+                    Aqui contenido dinamico
+                    <%
+                      String pagina = request.getParameter("pagina");
+                      String usuario = request.getParameter("usuario");
+                        
+                      if (pagina == null || pagina.equals("dashboard")) { %>
+                    <%@include file="dashboard.jsp" %>                        
+                    <% } else if (pagina.equals("clientes")) {%>
+                    <%@include file="Comercial/clientes.jsp" %>
+                    <% } else if (pagina.equals("pedidos")) {%>
+                    <%@include file="Comercial/pedidos.jsp" %>
+                    <% } else if (pagina.equals("productos")) {%>
+                    <%@include file="Comercial/productos.jsp"  %>
+                    <% } else if (pagina.equals("notaingreso")) {%>
+                    <%@include file="Inventario/notaingreso.jsp"  %>
+                    <% } else if (pagina.equals("planos")) {%>
+                    <%@include file="Ingenieria/planos.jsp"  %>
+                    <% } else if (pagina.equals("programafusion")) {%>
+                    <%@include file="Produccion/programafusion.jsp"  %>
+                    <% } else if (pagina.equals("procesosproduccion")) {%>
+                    <%@include file="Produccion/procesosproduccion.jsp"  %>
+                    <% } else if (pagina.equals("rechazos")) {%>
+                    <%@include file="Calidad/rechazos.jsp"  %>
+                    <% } else if (pagina.equals("usuarios")) {%>
+                    <%@include file="Configuracion/usuarios.jsp"  %>
+                    <%
+                        }
+                    %>
                 </div>
 
             </section>
             <script src="js/script.js"></script>
+            <script src="js/datos.js"></script>
         </section>            
 
     </body>
