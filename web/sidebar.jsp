@@ -1,4 +1,5 @@
 <%@page import="pe.com.db.Usuario" %>
+<%@page import="pe.com.db.Rol" %>
 <%@page import="java.util.LinkedList" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,8 +24,11 @@
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
         <!-- Para datatables jquery -->
-        <<link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css"/>
-        <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js" ></script>
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"/>
+        <!- <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js" ></script> -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+        
         <!-- --------------------------------------------------------------------------------------- -->
 
         <title>SGP | Fundicion</title>
@@ -134,6 +138,11 @@
                                 <a class="nav-link" href="sidebar.jsp?pagina=usuarios">Usuarios</a>
                             </li>
                         </ul>
+                        <ul class="text nav-text">
+                            <li class="nav-item">
+                                <a class="nav-link" href="sidebar.jsp?pagina=roles">Roles</a>
+                            </li>
+                        </ul>
                     </div>
 
                     <div class="bottom-content">
@@ -166,6 +175,7 @@
                     <%
                       String pagina = request.getParameter("pagina");
                       String usuario = request.getParameter("usuario");
+                      String rol = request.getParameter("rol");
                         
                       if (pagina == null || pagina.equals("dashboard")) { %>
                     <%@include file="dashboard.jsp" %>                        
@@ -193,6 +203,14 @@
                     <%@include file="Configuracion/editarusuario.jsp"  %>
                     <% } else if (pagina.equals("eliminarusuario")) {%>
                     <%@include file="Configuracion/eliminarusuario.jsp"  %>
+                    <% } else if (pagina.equals("roles")) {%>
+                    <%@include file="Configuracion/roles.jsp"  %>
+                    <% } else if (pagina.equals("verrol")) {%>
+                    <%@include file="Configuracion/verrol.jsp"  %>
+                    <% } else if (pagina.equals("editarrol")) {%>
+                    <%@include file="Configuracion/editarrol.jsp"  %>
+                    <% } else if (pagina.equals("eliminarrol")) {%>
+                    <%@include file="Configuracion/eliminarrol.jsp"  %>
                     <%
                         }
                     %>

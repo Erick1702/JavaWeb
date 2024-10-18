@@ -6,12 +6,30 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
-</html>
+<%
+    Rol r = new Rol();
+    r.verRol(rol);
+%>
+
+<h3>Eliminar Rol</h3><br>
+<form action="procesarol.jsp" method="post">
+    <input type="hidden" name="pagina" value="eliminar">
+    <table>
+        <tr>
+            <td>Idrol</td>
+            <td><input type="text" name="rol" class="form-control" value="<%=r.getIdrol()%>" readonly="true"></td>
+        </tr>
+        <tr>
+            <td>Descripcion</td>
+            <td><input type="text" name="descripcion"  class="form-control" value="<%=r.getDescripcion()%>"  readonly="true"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Aceptar"  class="btn btn-success"></td>
+            <td><a href="sidebar.jsp?pagina=roles" class="btn btn-danger">Cancelar</a></td>
+        </tr>
+    </table>
+</form>

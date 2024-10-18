@@ -1,8 +1,4 @@
-<%-- 
-    Document   : verusuario
-    Created on : 18 oct. 2024, 09:41:13
-    Author     : PC-ERICK
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
