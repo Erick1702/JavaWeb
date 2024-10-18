@@ -22,7 +22,12 @@
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-        <title>SGP | Rechazos</title>
+        <!-- Para datatables jquery -->
+        <<link rel="stylesheet" href="//cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css"/>
+        <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js" ></script>
+        <!-- --------------------------------------------------------------------------------------- -->
+
+        <title>SGP | Fundicion</title>
 
 
     </head>
@@ -186,6 +191,8 @@
                     <%@include file="Configuracion/verusuario.jsp"  %>
                     <% } else if (pagina.equals("editarusuario")) {%>
                     <%@include file="Configuracion/editarusuario.jsp"  %>
+                    <% } else if (pagina.equals("eliminarusuario")) {%>
+                    <%@include file="Configuracion/eliminarusuario.jsp"  %>
                     <%
                         }
                     %>
@@ -196,6 +203,10 @@
             <script src="js/datos.js"></script>
         </section>            
 
+        
     </body>
 
-</html>                                
+</html>     
+<script>
+            new DataTable('#example');
+        </script>

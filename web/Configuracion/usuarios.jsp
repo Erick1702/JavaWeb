@@ -58,7 +58,7 @@
 
 
 </form>
-<table class="table table-bordered table-hover">
+<table id="example" class="table table-bordered table-hover">
     <thead>
         <tr>
             <th>Usuario</th>
