@@ -1,5 +1,6 @@
 <%@page import="pe.com.db.Usuario" %>
 <%@page import="pe.com.db.Rol" %>
+<%@page import="pe.com.db.Cliente" %>
 <%@page import="java.util.LinkedList" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@
         <!- <script src="//cdn.datatables.net/2.1.8/js/dataTables.min.js" ></script> -->
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
-        
+
         <!-- --------------------------------------------------------------------------------------- -->
 
         <title>SGP | Fundicion</title>
@@ -42,7 +43,7 @@
             <header>
                 <div class="image-text">
                     <span class="image">
-                        <img src="http://localhost:8080/Prueba/imagen/logo.png" width="40" height="40">
+                        <img src="imagen/logo.png" width="40" height="40">
 
                     </span>
                     <div class="texto header-text">
@@ -69,7 +70,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="sidebar.jsp?pagina=clientes" >Clientes</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=clientes">Clientes</a>
 
                             </li>
                             <li class="nav-item">
@@ -88,7 +89,7 @@
                         </li>
                         <ul class="text nav-text">
                             <li class="nav-item">
-                                <a class="nav-link" href="sidebar.jsp?=pagina=notaingreso">Notas de Ingreso</a>
+                                <a class="nav-link" href="sidebar.jsp?pagina=notaingreso">Notas de Ingreso</a>
                             </li>
                         </ul>
                         <li class="text nav-text">
@@ -179,10 +180,11 @@
                         
                       if (pagina == null || pagina.equals("dashboard")) { %>
                     <%@include file="dashboard.jsp" %>                        
-                    <% } else if (pagina.equals("clientes")) {%>
-                    <%@include file="Comercial/clientes.jsp" %>
+
                     <% } else if (pagina.equals("pedidos")) {%>
                     <%@include file="Comercial/pedidos.jsp" %>
+                    <% } else if (pagina.equals("clientes")) {%>
+                    <%@include file="Comercial/clientes.jsp" %>
                     <% } else if (pagina.equals("productos")) {%>
                     <%@include file="Comercial/productos.jsp"  %>
                     <% } else if (pagina.equals("notaingreso")) {%>
@@ -225,10 +227,10 @@
             <script src="js/datos.js"></script>
         </section>            
 
-        
+
     </body>
 
 </html>     
 <script>
-            new DataTable('#example');
-        </script>
+    new DataTable('#example');
+</script>

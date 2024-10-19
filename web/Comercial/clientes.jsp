@@ -1,82 +1,69 @@
 <%-- 
     Document   : clientes
-    Created on : 19 set. 2024, 17:20:04
+    Created on : 18 oct. 2024, 20:51:04
     Author     : PC-ERICK
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<h2 class="h2">脕rea Comercial</h2>
+<%
+    Cliente cl = new Cliente();
+    LinkedList<Cliente> lista = new LinkedList<>();
+    lista = cl.listarClientes();
+    int cont = 0;
+%>
+
+<h2>Area Comercial</h2>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Clientes</a></li>                                              
+        <li class="breadcrumb-item"><a href="#">Clientes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Mantenimiento de Clientes</li>
     </ol>
+    que paso
 </nav>
 
-<form action="">
-    <div class="row col-md-12">
-        <div class="col-md-6">
-            <label for="" class="form-label">RUC</label>
-            <input type="text" class="form-control">
-        </div>
-        <div class="col-md-6">
-            <label for="" class="form-label">Vendedor</label>
-            <input type="text" class="form-control">
-        </div>
-    </div>
-</form>
-<br>
 
-<!-- Botones de acci贸n -->
-<div class="row md-3">
-    <div class="col-md-12">
-        <a href="mantcli.jsp"><button class="btn btn-success">Nuevo</button></a>
-        <a href="mantcli.jsp"><button class="btn btn-primary">Editar</button></a>
-        <button type="button" class="btn btn-danger" onclick="limpiarDatos()">Limpiar</button></a>
-    </div>                                                                                                            
-</div>
-<br>
-<!-- Tabla -->
-<div class="table-responsive">
+<a href="sidebar.jsp?pagina=crearcliente" class="btn btn-success">Nuevo</a>
+
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>RUC</th>
-                <th>Raz贸n Social</th>
-                <th>Direcci贸n</th>
-                <th>Tel茅fono</th>
-                <th>Vendedor</th>
+                <th>Raz髇 Social</th>
+                <th>Direcci髇</th>
+                <th>Tel閒ono</th>
+                <th>Anexo</th>
+                <th>Email</th>
+                <th>ver</th>
+                <th>ver</th>
+                <th>ver</th>
             </tr>
         </thead>
-        <tbody id="tablaBody">
+        <tbody >
+            <%
+             for (Cliente ux : lista) {
+                 cont++;
+            %>
             <tr>
-                <td>1</td>
-                <td>Raz贸n Social 1</td>
-                <td>Direcci贸n 1</td>
-                <td>Tel茅fono 1</td>
-                <td>Vendedor 1</td>
+
+                <td><%=ux.getIdcliente()%></td>
+                <td><%=ux.getRazonsocial()%></td>
+                <td><%=ux.getDireccion()%></td>
+                <td><%=ux.getTefono()%></td>
+                <td><%=ux.getAnexo()%></td>
+                <td><%=ux.getEmail()%></td>
+                <td><a href="sidebar.jsp?pagina=vercliente&cliente=<%=ux.getIdcliente()%>" class="btn btn-info">Ver</a></td>
+                <td><a href="sidebar.jsp?pagina=editarcliente&cliente=<%=ux.getIdcliente()%>" class="btn btn-warning">Editar</a></td>
+                <td><a href="sidebar.jsp?pagina=eliminarcliente&cliente=<%=ux.getIdcliente()%>"  class="btn btn-danger">Eliminar</a></td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>Raz贸n Social 2</td>
-                <td>Direcci贸n 2</td>
-                <td>Tel茅fono 2</td>
-                <td>Vendedor 2</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Raz贸n Social 3</td>
-                <td>Direcci贸n 3</td>
-                <td>Tel茅fono 3</td>
-                <td>Vendedor 3</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Raz贸n Social 4</td>
-                <td>Direcci贸n 4</td>
-                <td>Tel茅fono 4</td>
-                <td>Vendedor 4</td>
-            </tr>
+            <%
+                }
+            %>
         </tbody>
     </table>
+        <div class="row mb-3">
+    <div class="col-md-12">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <button type="button" class="btn btn-primary">Editar</button>
+        <button type="reset" class="btn btn-danger">Eliminar</button>
+    </div>                                          
 </div>
