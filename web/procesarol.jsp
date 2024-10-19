@@ -6,11 +6,11 @@
     String descripcion = request.getParameter("descripcion");
 
     if (pagina.equals("crear")) {
-        u.crearUsuario(rol, descripcion);
+        u.crearRol(rol, descripcion);
     } else if (pagina.equals("eliminar")) {
-        u.eliminarUsuario(rol);
+        u.eliminarRol(rol);
     } else if (pagina.equals("editar")) {
-        u.editarUsuario(rol,descripcion);
+        u.editarRol(rol,descripcion);
     }
     response.sendRedirect("sidebar.jsp?pagina=roles");
 

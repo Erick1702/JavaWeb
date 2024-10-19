@@ -15,6 +15,8 @@
     </ol>
 </nav>
 
+<a href="sidebar.jsp?pagina=crearrol" class="btn btn-success">Nuevo</a>
+
 <table class="table table-bordered table-hover">
     <thead>
         <tr>

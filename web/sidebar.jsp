@@ -197,6 +197,8 @@
                     <%@include file="Calidad/rechazos.jsp"  %>
                     <% } else if (pagina.equals("usuarios")) {%>
                     <%@include file="Configuracion/usuarios.jsp"  %>
+                    <% } else if (pagina.equals("crearusuario")) {%>
+                    <%@include file="Configuracion/crearusuario.jsp"  %>
                     <% } else if (pagina.equals("verusuario")) {%>
                     <%@include file="Configuracion/verusuario.jsp"  %>
                     <% } else if (pagina.equals("editarusuario")) {%>
@@ -205,6 +207,8 @@
                     <%@include file="Configuracion/eliminarusuario.jsp"  %>
                     <% } else if (pagina.equals("roles")) {%>
                     <%@include file="Configuracion/roles.jsp"  %>
+                    <% } else if (pagina.equals("crearrol")) {%>
+                    <%@include file="Configuracion/crearrol.jsp"  %>
                     <% } else if (pagina.equals("verrol")) {%>
                     <%@include file="Configuracion/verrol.jsp"  %>
                     <% } else if (pagina.equals("editarrol")) {%>

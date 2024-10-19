@@ -66,6 +66,22 @@ public class Rol {
             System.out.println(e.getMessage());
         }
     }
+    
+    public void crearRol(String rl, String descri) throws ClassNotFoundException{
+        try {
+            Conexion c = new Conexion();
+            Connection cnx = c.conecta();
+            String query = "insert into rol values (?,?);";
+            PreparedStatement sentencia = cnx.prepareStatement(query);
+            sentencia.setString(1, rl);
+            sentencia.setString(2, descri);
+            sentencia.executeUpdate();
+            sentencia.close();
+            cnx.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
     public void editarRol(String rl, String descri) throws ClassNotFoundException {
         try {

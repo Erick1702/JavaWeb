@@ -58,6 +58,8 @@
 
 
 </form>
+
+<a href="sidebar.jsp?pagina=crearusuario" class="btn btn-success">Nuevo</a>
 <table id="example" class="table table-bordered table-hover">
     <thead>
         <tr>
