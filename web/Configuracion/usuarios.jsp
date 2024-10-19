@@ -65,6 +65,10 @@
         <tr>
             <th>Usuario</th>
             <th>Password</th>
+            <th>Nombre</th>
+            <th>Ap_Paterno</th>
+            <th>Ap_Materno</th>
+            <th>Rol</th>
             <th>Ver</th>
             <th>Editar</th>
             <th>Eliminar</th>
@@ -79,6 +83,15 @@
         <tr>
             <td><%=ux.getUsurio()%></td>
             <td><%=ux.getPassword()%></td>
+            <td><%=ux.getNombre()%></td>
+            <td><%=ux.getAppaterno()%></td>
+            <td><%=ux.getApmaterno()%></td>
+            <%
+                Rol r = new Rol();
+                String idrol = ux.getIdrol();
+                String rol1 = r.buscarRol(idrol);
+            %>
+            <td><%= rol1 %></td>
             <td> <a href="sidebar.jsp?pagina=verusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-info" >Ver</a> </td>
             <td> <a href="sidebar.jsp?pagina=editarusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-warning" >Editar</a> </td>
             <td> <a href="sidebar.jsp?pagina=eliminarusuario&usuario=<%= ux.getUsurio() %>" class="btn btn-danger" >Eliminar</a> </td>

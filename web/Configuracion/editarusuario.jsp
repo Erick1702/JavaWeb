@@ -5,28 +5,53 @@
 <%
     Usuario u = new Usuario();
     u.verUsuario(usuario);
+    
+Rol r = new Rol();
+    LinkedList<Rol> listaRoles = new LinkedList<>();
+    listaRoles = r.listarRoles();
+    
+   String descripcionrol = r.buscarRol(u.getIdrol());
 %>
 
 <h3>Editar usuario</h3>
+
+
 <form action="procesausuario.jsp" method="post">
     <input type="hidden" name="pagina" value="editar">
-    
-    <table>
-        <tr>
-            <td>Usuario</td>
-            <td><input type="text" name="usuario" class="form-control"  value="<%=u.getUsurio()%>" readonly="true"></td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td><input type="text" name="password"  class="form-control"  value="<%=u.getPassword()%>" ></td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td><input type="submit" value="Aceptar"  class="btn btn-success"></td>
-            <td><a href="sidebar.jsp?pagina=usuarios" class="btn btn-danger">Cancelar</a></td>
-        </tr>
-    </table>    
-</form>
+    <div class="row mb-3">
+        <div class="col-md-6">
+            <label for="userId" class="form-label" name="usuario">Usuario</label>
+            <input type="text" name="usuario" class="form-control"  value="<%=u.getUsurio()%>" readonly="true">
+        </div>
+        <div class="col-md-6">
+            <label for="firstName" class="form-label">Password</label>
+            <input type="text" name="password"  class="form-control"  value="<%=u.getPassword()%>" >
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col">
+            <label for="lastName1" class="form-label">Apellido Paterno</label>
+            <input type="text" name="appaterno"  class="form-control" value="<%=u.getAppaterno()%>"  >
+        </div>
+        <div class="col">
+            <label for="lastName2" class="form-label">Apellido Materno</label>
+            <input type="text" name="apmaterno"  class="form-control" value="<%=u.getApmaterno()%>"  >
+        </div>
+    </div>
+
+    <label >Elige Rol del Usuario:</label>
+    <select id="usuariorol"  name="idrol">
+        <% for (Rol rol2 : listaRoles) { %>
+        <option value="<%= rol2.getIdrol() %>" 
+                <%= descripcionrol.equals(rol2.getDescripcion()) ? "selected" : "" %>> 
+            <%= rol2.getDescripcion() %>
+        </option>
+        <% } %>
+    </select>
+
+    <td><input type="submit" value="Aceptar"  class="btn btn-success"></td>
+    <td><a href="sidebar.jsp?pagina=usuarios" class="btn btn-danger">Cancelar</a></td>
+</form>                   
+
+

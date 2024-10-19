@@ -89,6 +89,8 @@ public class Cliente {
                 lista.add(cl);
 
             }
+            sentencia.close();
+            cnx.close();
             return lista;
         } catch (SQLException e) {
             System.out.println(e.getMessage());

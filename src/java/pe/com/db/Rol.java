@@ -113,4 +113,23 @@ public class Rol {
             System.out.println(e.getMessage());
         }
     }
+    
+    public String buscarRol(String id) throws ClassNotFoundException{
+        String descripcion = "";
+        try {
+            Conexion c = new Conexion();
+            Connection cnx = c.conecta();            
+            String consulta = "select * from rol where id_rol ='" + id + "';";
+            Statement sentencia = cnx.createStatement();
+            ResultSet resultado = sentencia.executeQuery(consulta);          
+            while(resultado.next()){
+                descripcion = resultado.getString("descripcion");
+            }  
+            sentencia.close();
+            cnx.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return descripcion;
+    }
  }

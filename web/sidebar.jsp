@@ -148,7 +148,7 @@
 
                     <div class="bottom-content">
                         <li class="text nav-text">
-                            <a href="#">
+                            <a href="cerrarsesion.jsp">
                                 <i class='bx bx-log-out icon'></i>
                                 <span class="text nav-text">Logout</span>
                             </a>
@@ -185,6 +185,12 @@
                     <%@include file="Comercial/pedidos.jsp" %>
                     <% } else if (pagina.equals("clientes")) {%>
                     <%@include file="Comercial/clientes.jsp" %>
+                    <% } else if (pagina.equals("crearcliente")) {%>
+                    <%@include file="Comercial/crearcliente.jsp" %>
+                    <% } else if (pagina.equals("editarcliente")) {%>
+                    <%@include file="Comercial/editarcliente.jsp" %>
+                    <% } else if (pagina.equals("eliminarcliente")) {%>
+                    <%@include file="Comercial/eliminarcliente.jsp" %>
                     <% } else if (pagina.equals("productos")) {%>
                     <%@include file="Comercial/productos.jsp"  %>
                     <% } else if (pagina.equals("notaingreso")) {%>
