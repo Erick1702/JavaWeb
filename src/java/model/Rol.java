@@ -1,4 +1,4 @@
-package pe.com.db;
+package model;
 
 import model.Conexion;
 import java.sql.Connection;
