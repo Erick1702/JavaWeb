@@ -1,5 +1,6 @@
-package pe.com.db;
+package model;
 
+import model.Conexion;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
